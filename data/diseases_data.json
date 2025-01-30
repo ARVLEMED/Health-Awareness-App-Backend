@@ -1,0 +1,393 @@
+[
+  {
+    "name": "Diabetes Mellitus",
+    "category": "Non-communicable",
+    "causes": [
+      "Insufficient insulin secretion",
+      "Genetic predisposition",
+      "Unhealthy lifestyle"
+    ],
+    "symptoms": [
+      "Increased thirst",
+      "Frequent urination",
+      "Unexplained weight loss"
+    ],
+    "prevention": [
+      "Healthy diet",
+      "Regular exercise",
+      "Weight management"
+    ],
+    "treatment": [
+      "Insulin therapy",
+      "Oral medications",
+      "Lifestyle changes"
+    ],
+    "pathogen": null,
+    "mode_of_spread": null,
+    "incubation_period": null
+  },
+  {
+    "name": "Malaria",
+    "category": "Communicable",
+    "causes": [
+      "Plasmodium parasite",
+      "Mosquito bites"
+    ],
+    "symptoms": [
+      "Fever",
+      "Chills",
+      "Sweating"
+    ],
+    "prevention": [
+      "Use of mosquito nets",
+      "Insect repellents",
+      "Prevent stagnant water"
+    ],
+    "treatment": [
+      "Antimalarial medications"
+    ],
+    "pathogen": "Plasmodium species",
+    "mode_of_spread": "Mosquito bites (female Anopheles)",
+    "incubation_period": "7-30 days"
+  },
+  {
+    "name": "Hypertension",
+    "category": "Non-communicable",
+    "causes": [
+      "Stress",
+      "Unhealthy diet",
+      "Genetic predisposition"
+    ],
+    "symptoms": [
+      "Headache",
+      "Shortness of breath",
+      "Nosebleeds"
+    ],
+    "prevention": [
+      "Low-sodium diet",
+      "Regular exercise",
+      "Stress management"
+    ],
+    "treatment": [
+      "Antihypertensive drugs",
+      "Lifestyle changes"
+    ],
+    "pathogen": null,
+    "mode_of_spread": null,
+    "incubation_period": null
+  },
+  {
+    "name": "Dengue",
+    "category": "Communicable",
+    "causes": [
+      "Dengue virus"
+    ],
+    "symptoms": [
+      "High fever",
+      "Severe headache",
+      "Pain behind the eyes",
+      "Joint pain",
+      "Rashes"
+    ],
+    "prevention": [
+      "Avoid water stagnation",
+      "Use of mosquito repellents",
+      "Wear long-sleeved clothing"
+    ],
+    "treatment": [
+      "Symptomatic treatment",
+      "Fluid replacement"
+    ],
+    "pathogen": "Dengue virus",
+    "mode_of_spread": "Mosquito bites (Aedes aegypti)",
+    "incubation_period": "3-14 days"
+  },
+  {
+    "name": "Tuberculosis",
+    "category": "Communicable",
+    "causes": [
+      "Mycobacterium tuberculosis"
+    ],
+    "symptoms": [
+      "Persistent cough",
+      "Chest pain",
+      "Fever",
+      "Weight loss"
+    ],
+    "prevention": [
+      "BCG vaccination",
+      "Avoiding close contact with infected individuals"
+    ],
+    "treatment": [
+      "Antibiotics (e.g., Rifampicin, Isoniazid)"
+    ],
+    "pathogen": "Mycobacterium tuberculosis",
+    "mode_of_spread": "Airborne droplets",
+    "incubation_period": "2-10 weeks"
+  },
+  {
+    "name": "Influenza",
+    "category": "Communicable",
+    "causes": [
+      "Influenza virus"
+    ],
+    "symptoms": [
+      "Fever",
+      "Cough",
+      "Sore throat",
+      "Fatigue"
+    ],
+    "prevention": [
+      "Annual vaccination",
+      "Good hygiene",
+      "Avoiding contact with infected individuals"
+    ],
+    "treatment": [
+      "Antiviral medications",
+      "Symptomatic relief"
+    ],
+    "pathogen": "Influenza virus",
+    "mode_of_spread": "Droplet infection",
+    "incubation_period": "1-4 days"
+  },
+  {
+    "name": "Cholera",
+    "category": "Communicable",
+    "causes": [
+      "Vibrio cholerae bacteria"
+    ],
+    "symptoms": [
+      "Severe diarrhea",
+      "Dehydration",
+      "Abdominal cramps"
+    ],
+    "prevention": [
+      "Safe drinking water",
+      "Proper sanitation",
+      "Hygienic food handling"
+    ],
+    "treatment": [
+      "Oral rehydration therapy (ORT)",
+      "Antibiotics"
+    ],
+    "pathogen": "Vibrio cholerae",
+    "mode_of_spread": "Contaminated water and food",
+    "incubation_period": "12 hours to 5 days"
+  },
+  {
+    "name": "Leprosy",
+    "category": "Communicable",
+    "causes": [
+      "Mycobacterium leprae"
+    ],
+    "symptoms": [
+      "Skin lesions",
+      "Numbness",
+      "Muscle weakness"
+    ],
+    "prevention": [
+      "Avoid close contact with untreated patients",
+      "Early diagnosis and treatment"
+    ],
+    "treatment": [
+      "Multi-drug therapy (MDT)"
+    ],
+    "pathogen": "Mycobacterium leprae",
+    "mode_of_spread": "Prolonged contact with infected individuals",
+    "incubation_period": "Several months to years"
+  },
+  {
+    "name": "Hepatitis B",
+    "category": "Communicable",
+    "causes": [
+      "Hepatitis B virus"
+    ],
+    "symptoms": [
+      "Jaundice",
+      "Fatigue",
+      "Abdominal pain",
+      "Dark urine"
+    ],
+    "prevention": [
+      "Hepatitis B vaccination",
+      "Avoid sharing needles",
+      "Safe blood transfusions"
+    ],
+    "treatment": [
+      "Antiviral medications",
+      "Supportive care"
+    ],
+    "pathogen": "Hepatitis B virus",
+    "mode_of_spread": "Contact with infected blood, sexual contact",
+    "incubation_period": "1-6 months"
+  },
+  {
+    "name": "Rabies",
+    "category": "Communicable",
+    "causes": [
+      "Rabies virus"
+    ],
+    "symptoms": [
+      "Fever",
+      "Headache",
+      "Hydrophobia",
+      "Paralysis"
+    ],
+    "prevention": [
+      "Vaccination of pets",
+      "Post-exposure prophylaxis (PEP)"
+    ],
+    "treatment": [
+      "Post-exposure prophylaxis",
+      "Supportive care"
+    ],
+    "pathogen": "Rabies virus",
+    "mode_of_spread": "Bite of infected animals",
+    "incubation_period": "1-3 months"
+  },
+  {
+    "name": "Amoebiasis",
+    "category": "Communicable",
+    "causes": [
+      "Entamoeba histolytica"
+    ],
+    "symptoms": [
+      "Abdominal pain",
+      "Diarrhea",
+      "Mucus in stool"
+    ],
+    "prevention": [
+      "Proper sanitation",
+      "Washing vegetables and fruits",
+      "Boiling water before drinking"
+    ],
+    "treatment": [
+      "Antibiotics",
+      "Anti-amoebic drugs"
+    ],
+    "pathogen": "Entamoeba histolytica",
+    "mode_of_spread": "Contaminated food and water",
+    "incubation_period": "2-4 weeks"
+  },
+  {
+    "name": "Typhoid",
+    "category": "Communicable",
+    "causes": [
+      "Salmonella typhi"
+    ],
+    "symptoms": [
+      "High fever",
+      "Weakness",
+      "Abdominal pain",
+      "Rashes"
+    ],
+    "prevention": [
+      "Safe drinking water",
+      "Proper sanitation",
+      "Vaccination"
+    ],
+    "treatment": [
+      "Antibiotics",
+      "Fluids for hydration"
+    ],
+    "pathogen": "Salmonella typhi",
+    "mode_of_spread": "Contaminated food and water",
+    "incubation_period": "6-30 days"
+  },
+  {
+    "name": "Syphilis",
+    "category": "Communicable",
+    "causes": [
+      "Treponema pallidum"
+    ],
+    "symptoms": [
+      "Sores on genitals",
+      "Rashes on hands and feet",
+      "Fever"
+    ],
+    "prevention": [
+      "Safe sexual practices",
+      "Regular medical checkups"
+    ],
+    "treatment": [
+      "Antibiotics (e.g., penicillin)"
+    ],
+    "pathogen": "Treponema pallidum",
+    "mode_of_spread": "Sexual contact",
+    "incubation_period": "10-90 days"
+  },
+  {
+    "name": "Gonorrhea",
+    "category": "Communicable",
+    "causes": [
+      "Neisseria gonorrhoeae"
+    ],
+    "symptoms": [
+      "Painful urination",
+      "Discharge from genitals",
+      "Pelvic pain"
+    ],
+    "prevention": [
+      "Safe sexual practices",
+      "Avoiding multiple partners"
+    ],
+    "treatment": [
+      "Antibiotics"
+    ],
+    "pathogen": "Neisseria gonorrhoeae",
+    "mode_of_spread": "Sexual contact",
+    "incubation_period": "2-14 days"
+  },
+  {
+    "name": "Asthma",
+    "category": "Non-communicable",
+    "causes": [
+      "Allergens",
+      "Environmental triggers",
+      "Genetic factors"
+    ],
+    "symptoms": [
+      "Wheezing",
+      "Shortness of breath",
+      "Chest tightness"
+    ],
+    "prevention": [
+      "Avoid allergens",
+      "Use of air filters",
+      "Early medical intervention"
+    ],
+    "treatment": [
+      "Inhalers",
+      "Bronchodilators",
+      "Corticosteroids"
+    ],
+    "pathogen": null,
+    "mode_of_spread": null,
+    "incubation_period": null
+  },
+  {
+    "name": "Meningitis",
+    "category": "Communicable",
+    "causes": [
+      "Bacterial infection",
+      "Viral infection"
+    ],
+    "symptoms": [
+      "Severe headache",
+      "Neck stiffness",
+      "Sensitivity to light"
+    ],
+    "prevention": [
+      "Vaccination",
+      "Good hygiene",
+      "Avoiding close contact with infected individuals"
+    ],
+    "treatment": [
+      "Antibiotics",
+      "Supportive care"
+    ],
+    "pathogen": "Neisseria meningitidis (bacterial), Enteroviruses (viral)",
+    "mode_of_spread": "Close contact, respiratory droplets",
+    "incubation_period": "2-10 days"
+  }
+]

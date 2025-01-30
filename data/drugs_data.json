@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "name": "Paracetamol",
+        "category": "Pain Reliever",
+        "usage": "Used to relieve mild to moderate pain and reduce fever.",
+        "dosage": "500mg every 4-6 hours (max 4g per day).",
+        "sideEffects": ["Nausea", "Rash", "Liver damage (if overdosed)"],
+        "precautions": ["Avoid alcohol", "Not for use in severe liver disease"]
+    },
+    {
+        "id": 2,
+        "name": "Ibuprofen",
+        "category": "Anti-inflammatory",
+        "usage": "Used to relieve pain, inflammation, and reduce fever.",
+        "dosage": "200-400mg every 4-6 hours (max 1.2g per day).",
+        "sideEffects": ["Stomach upset", "Nausea", "Dizziness"],
+        "precautions": ["Take with food", "Avoid in kidney disease"]
+    },
+    {
+        "id": 3,
+        "name": "Amoxicillin",
+        "category": "Antibiotic",
+        "usage": "Treats bacterial infections like pneumonia and sinusitis.",
+        "dosage": "500mg every 8 hours for 7-10 days.",
+        "sideEffects": ["Diarrhea", "Rash", "Allergic reaction"],
+        "precautions": ["Complete full course", "Avoid if allergic to penicillin"]
+    },
+    {
+        "id": 4,
+        "name": "Aspirin",
+        "category": "Pain Reliever",
+        "usage": "Used to reduce pain, inflammation, and fever. Often used for heart attack and stroke prevention.",
+        "dosage": "75-100mg once daily (max 4g per day for pain).",
+        "sideEffects": ["Stomach irritation", "Ulcers", "Bleeding risk", "Dizziness"],
+        "precautions": ["Take with food", "Avoid in bleeding disorders", "Not recommended for children with viral infections"]
+    },
+    {
+        "id": 5,
+        "name": "Metformin",
+        "category": "Antidiabetic",
+        "usage": "Used to control blood sugar levels in people with type 2 diabetes.",
+        "dosage": "500mg twice a day, can be increased to 2000mg per day.",
+        "sideEffects": ["Nausea", "Diarrhea", "Bloating", "Vitamin B12 deficiency"],
+        "precautions": ["Monitor kidney function", "Avoid alcohol", "Not for people with kidney disease"]
+    },
+    {
+        "id": 6,
+        "name": "Lisinopril",
+        "category": "Antihypertensive",
+        "usage": "Used to treat high blood pressure and heart failure.",
+        "dosage": "5-40mg once daily.",
+        "sideEffects": ["Dizziness", "Fatigue", "Cough", "Elevated potassium levels"],
+        "precautions": ["Monitor blood pressure", "Avoid potassium supplements", "Not recommended for pregnant women"]
+    },
+    {
+        "id": 7,
+        "name": "Losartan",
+        "category": "Antihypertensive",
+        "usage": "Used to treat high blood pressure and protect the kidneys in people with diabetes.",
+        "dosage": "25-100mg once daily.",
+        "sideEffects": ["Dizziness", "Fatigue", "Elevated potassium levels", "Headache"],
+        "precautions": ["Avoid high potassium foods", "Monitor kidney function", "Avoid in pregnancy"]
+    },
+    {
+        "id": 8,
+        "name": "Simvastatin",
+        "category": "Cholesterol-lowering",
+        "usage": "Used to lower cholesterol and reduce the risk of heart disease.",
+        "dosage": "10-40mg once daily, preferably in the evening.",
+        "sideEffects": ["Muscle pain", "Liver enzyme abnormalities", "Constipation", "Nausea"],
+        "precautions": ["Monitor liver function", "Avoid grapefruit", "Not for pregnant women"]
+    },
+    {
+        "id": 9,
+        "name": "Omeprazole",
+        "category": "Proton Pump Inhibitor (PPI)",
+        "usage": "Used to treat acid reflux, ulcers, and gastroesophageal reflux disease (GERD).",
+        "dosage": "20-40mg once daily, before meals.",
+        "sideEffects": ["Headache", "Diarrhea", "Abdominal pain", "Nausea"],
+        "precautions": ["Long-term use may cause vitamin B12 deficiency", "Avoid in liver disease"]
+    },
+    {
+        "id": 10,
+        "name": "Ciprofloxacin",
+        "category": "Antibiotic",
+        "usage": "Used to treat bacterial infections like urinary tract infections and respiratory infections.",
+        "dosage": "250-750mg twice daily, depending on the infection.",
+        "sideEffects": ["Nausea", "Diarrhea", "Tendonitis", "Dizziness"],
+        "precautions": ["Avoid in pregnant women", "Take with plenty of water", "Monitor for tendon injuries"]
+    },
+    {
+        "id": 11,
+        "name": "Hydrochlorothiazide",
+        "category": "Diuretic",
+        "usage": "Used to treat high blood pressure and fluid retention (edema).",
+        "dosage": "12.5-50mg once daily.",
+        "sideEffects": ["Dizziness", "Increased urination", "Low potassium", "Dehydration"],
+        "precautions": ["Monitor potassium levels", "Take with food", "Not recommended for people with kidney disease"]
+    },
+    {
+        "id": 12,
+        "name": "Alprazolam",
+        "category": "Benzodiazepine",
+        "usage": "Used to treat anxiety and panic disorders.",
+        "dosage": "0.25-0.5mg 2-3 times daily, up to 4mg per day.",
+        "sideEffects": ["Drowsiness", "Dizziness", "Memory problems", "Dependence risk"],
+        "precautions": ["Avoid alcohol", "Monitor for signs of addiction", "Not for long-term use"]
+    },
+    {
+        "id": 13,
+        "name": "Prednisone",
+        "category": "Corticosteroid",
+        "usage": "Used to reduce inflammation and treat conditions like arthritis and allergic reactions.",
+        "dosage": "5-60mg daily, depending on the condition.",
+        "sideEffects": ["Weight gain", "Increased blood sugar", "Mood changes", "Increased risk of infections"],
+        "precautions": ["Monitor blood sugar levels", "Avoid abrupt discontinuation", "Long-term use can lead to bone thinning"]
+    },
+    {
+        "id": 14,
+        "name": "Furosemide",
+        "category": "Diuretic",
+        "usage": "Used to treat fluid retention caused by conditions such as heart failure or kidney disease.",
+        "dosage": "20-80mg once or twice daily.",
+        "sideEffects": ["Dizziness", "Low potassium", "Dehydration", "Low blood pressure"],
+        "precautions": ["Monitor electrolytes", "Avoid excessive sunlight", "Not for pregnant women"]
+    },
+    {
+        "id": 15,
+        "name": "Tamsulosin",
+        "category": "Alpha-blocker",
+        "usage": "Used to treat symptoms of benign prostatic hyperplasia (BPH) in men.",
+        "dosage": "0.4mg once daily.",
+        "sideEffects": ["Dizziness", "Headache", "Ejaculation problems", "Low blood pressure"],
+        "precautions": ["Avoid sudden standing", "Not recommended for people with kidney disease"]
+    },
+    {
+        "id": 16,
+        "name": "Venlafaxine",
+        "category": "Antidepressant",
+        "usage": "Used to treat depression, anxiety, and panic disorders.",
+        "dosage": "75-225mg once daily.",
+        "sideEffects": ["Nausea", "Dizziness", "Dry mouth", "Fatigue"],
+        "precautions": ["Monitor for suicidal thoughts", "May increase blood pressure", "Not for pregnant women"]
+    },
+    {
+        "id": 17,
+        "name": "Zolpidem",
+        "category": "Sedative",
+        "usage": "Used to treat insomnia (trouble sleeping).",
+        "dosage": "5-10mg before bedtime.",
+        "sideEffects": ["Drowsiness", "Dizziness", "Headache", "Memory problems"],
+        "precautions": ["Avoid alcohol", "May impair motor skills", "Not for long-term use"]
+    },
+    {
+        "id": 18,
+        "name": "Clopidogrel",
+        "category": "Antiplatelet",
+        "usage": "Used to prevent blood clots after heart attack or stroke.",
+        "dosage": "75mg once daily.",
+        "sideEffects": ["Bleeding", "Bruising", "Stomach upset"],
+        "precautions": ["Avoid in active bleeding conditions", "Monitor for signs of bleeding"]
+    },
+    {
+        "id": 19,
+        "name": "Ranitidine",
+        "category": "H2 Blocker",
+        "usage": "Used to treat ulcers, GERD, and heartburn.",
+        "dosage": "150mg twice a day.",
+        "sideEffects": ["Headache", "Dizziness", "Constipation"],
+        "precautions": ["Avoid alcohol", "Monitor for heartburn relief"]
+    },
+    {
+        "id": 20,
+        "name": "Diazepam",
+        "category": "Benzodiazepine",
+        "usage": "Used to treat anxiety, muscle spasms, and seizures.",
+        "dosage": "2-10mg, 2-4 times daily.",
+        "sideEffects": ["Drowsiness", "Dizziness", "Confusion", "Dependency risk"],
+        "precautions": ["Avoid alcohol", "Monitor for addiction risk"]
+    },
+    {
+        "id": 21,
+        "name": "Zofran",
+        "category": "Antiemetic",
+        "usage": "Used to prevent nausea and vomiting caused by surgery or chemotherapy.",
+        "dosage": "4-8mg every 8 hours as needed.",
+        "sideEffects": ["Headache", "Dizziness", "Constipation"],
+        "precautions": ["Monitor for serotonin syndrome", "Avoid if allergic to ondansetron"]
+    },
+    {
+        "id": 22,
+        "name": "Doxycycline",
+        "category": "Antibiotic",
+        "usage": "Used to treat bacterial infections, including acne and respiratory infections.",
+        "dosage": "100mg every 12 hours.",
+        "sideEffects": ["Nausea", "Diarrhea", "Sensitivity to sunlight"],
+        "precautions": ["Avoid direct sunlight", "Take with plenty of water"]
+    },
+    {
+        "id": 23,
+        "name": "Amlodipine",
+        "category": "Calcium Channel Blocker",
+        "usage": "Used to treat high blood pressure and chest pain (angina).",
+        "dosage": "5-10mg once daily.",
+        "sideEffects": ["Swelling", "Dizziness", "Headache"],
+        "precautions": ["Monitor blood pressure", "Avoid rapid discontinuation"]
+    },
+    {
+        "id": 24,
+        "name": "Fluoxetine",
+        "category": "Antidepressant",
+        "usage": "Used to treat depression, OCD, and panic disorders.",
+        "dosage": "20-40mg once daily.",
+        "sideEffects": ["Insomnia", "Dizziness", "Sexual dysfunction"],
+        "precautions": ["Monitor for suicidal thoughts", "Avoid abrupt discontinuation"]
+    },
+    {
+        "id": 25,
+        "name": "Atorvastatin",
+        "category": "Cholesterol-lowering",
+        "usage": "Used to reduce cholesterol and lower risk of heart disease.",
+        "dosage": "10-80mg once daily.",
+        "sideEffects": ["Muscle pain", "Nausea", "Headache"],
+        "precautions": ["Monitor liver enzymes", "Avoid grapefruit"]
+    },
+    {
+        "id": 26,
+        "name": "Fentanyl",
+        "category": "Opioid Analgesic",
+        "usage": "Used for severe pain management, often for cancer patients.",
+        "dosage": "Patch: 12mcg/hr, change every 72 hours.",
+        "sideEffects": ["Drowsiness", "Constipation", "Nausea", "Respiratory depression"],
+        "precautions": ["Risk of overdose", "Avoid alcohol", "Monitor closely for side effects"]
+    },
+    {
+        "id": 27,
+        "name": "Gabapentin",
+        "category": "Anticonvulsant",
+        "usage": "Used to treat nerve pain and seizures.",
+        "dosage": "300-1200mg per day, divided into 2-3 doses.",
+        "sideEffects": ["Dizziness", "Drowsiness", "Fatigue"],
+        "precautions": ["Taper off gradually", "Avoid alcohol"]
+    },
+    {
+        "id": 28,
+        "name": "Loratadine",
+        "category": "Antihistamine",
+        "usage": "Used to treat allergy symptoms, including hay fever and hives.",
+        "dosage": "10mg once daily.",
+        "sideEffects": ["Drowsiness", "Dry mouth", "Headache"],
+        "precautions": ["Avoid alcohol", "Monitor for excessive drowsiness"]
+    },
+    {
+        "id": 29,
+        "name": "Morphine",
+        "category": "Opioid Analgesic",
+        "usage": "Used to manage moderate to severe pain.",
+        "dosage": "10-30mg every 4 hours as needed.",
+        "sideEffects": ["Drowsiness", "Constipation", "Nausea"],
+        "precautions": ["Risk of addiction", "Monitor closely for respiratory depression"]
+    },
+    {
+        "id": 30,
+        "name": "Hydrocodone",
+        "category": "Opioid Analgesic",
+        "usage": "Used for the relief of moderate to severe pain and as a cough suppressant.",
+        "dosage": "5-10mg every 4-6 hours.",
+        "sideEffects": ["Drowsiness", "Constipation", "Dizziness"],
+        "precautions": ["Risk of addiction", "Avoid alcohol"]
+    },
+    {
+        "id": 31,
+        "name": "Trazodone",
+        "category": "Antidepressant",
+        "usage": "Used to treat depression and insomnia.",
+        "dosage": "50-100mg at bedtime.",
+        "sideEffects": ["Drowsiness", "Dizziness", "Dry mouth"],
+        "precautions": ["Avoid alcohol", "Monitor for suicidal thoughts"]
+    },
+    {
+        "id": 32,
+        "name": "Levothyroxine",
+        "category": "Thyroid hormone",
+        "usage": "Used to treat hypothyroidism.",
+        "dosage": "25-300mcg daily, based on thyroid function.",
+        "sideEffects": ["Increased heart rate", "Weight loss", "Anxiety"],
+        "precautions": ["Monitor thyroid levels", "Avoid abrupt discontinuation"]
+    },
+    {
+        "id": 33,
+        "name": "Risperidone",
+        "category": "Antipsychotic",
+        "usage": "Used to treat schizophrenia, bipolar disorder, and irritability in autism.",
+        "dosage": "1-6mg daily, depending on the condition.",
+        "sideEffects": ["Dizziness", "Drowsiness", "Weight gain"],
+        "precautions": ["Monitor for metabolic changes", "Not for use in elderly patients with dementia-related psychosis"]
+    },
+    {
+        "id": 34,
+        "name": "Ezetimibe",
+        "category": "Cholesterol-lowering",
+        "usage": "Used to lower cholesterol levels by reducing the absorption of cholesterol from food.",
+        "dosage": "10mg once daily.",
+        "sideEffects": ["Diarrhea", "Fatigue", "Abdominal pain"],
+        "precautions": ["Monitor liver function", "Avoid in liver disease"]
+    },
+    {
+        "id": 35,
+        "name": "Clindamycin",
+        "category": "Antibiotic",
+        "usage": "Used to treat bacterial infections, including skin and soft tissue infections.",
+        "dosage": "150-450mg every 6-8 hours.",
+        "sideEffects": ["Nausea", "Diarrhea", "Rash"],
+        "precautions": ["Monitor for C. difficile infection", "Avoid in allergic reactions to lincosamides"]
+    },
+    {
+        "id": 36,
+        "name": "Citalopram",
+        "category": "Antidepressant",
+        "usage": "Used to treat depression and anxiety disorders.",
+        "dosage": "20-40mg once daily.",
+        "sideEffects": ["Nausea", "Insomnia", "Dizziness"],
+        "precautions": ["Monitor for suicidal thoughts", "Avoid abrupt discontinuation"]
+    },
+    {
+        "id": 37,
+        "name": "Folic Acid",
+        "category": "Vitamin",
+        "usage": "Used to treat folate deficiency and prevent birth defects.",
+        "dosage": "400-1000mcg daily.",
+        "sideEffects": ["Nausea", "Bloating", "Loss of appetite"],
+        "precautions": ["Monitor folate levels", "Avoid overdose"]
+    },
+    {
+        "id": 38,
+        "name": "Sildenafil",
+        "category": "Phosphodiesterase Inhibitor",
+        "usage": "Used to treat erectile dysfunction.",
+        "dosage": "50mg one hour before sexual activity.",
+        "sideEffects": ["Headache", "Dizziness", "Flushing"],
+        "precautions": ["Avoid alcohol", "Not for people with heart conditions"]
+    },
+    {
+        "id": 39,
+        "name": "Atropine",
+        "category": "Anticholinergic",
+        "usage": "Used in emergency situations to treat bradycardia (slow heart rate).",
+        "dosage": "1mg IV, repeat every 3-5 minutes as needed.",
+        "sideEffects": ["Dry mouth", "Dizziness", "Blurred vision"],
+        "precautions": ["Monitor heart rate", "Not for use in certain eye conditions"]
+    },
+    {
+        "id": 40,
+        "name": "Naproxen",
+        "category": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
+        "usage": "Used to relieve pain, inflammation, and fever.",
+        "dosage": "250-500mg every 12 hours.",
+        "sideEffects": ["Stomach upset", "Headache", "Dizziness"],
+        "precautions": ["Take with food", "Avoid in kidney disease"]
+    },
+    {
+        "id": 41,
+        "name": "Codeine",
+        "category": "Opioid Analgesic",
+        "usage": "Used to treat mild to moderate pain and cough.",
+        "dosage": "15-60mg every 4-6 hours as needed.",
+        "sideEffects": ["Drowsiness", "Constipation", "Nausea"],
+        "precautions": ["Risk of addiction", "Avoid alcohol", "Monitor closely for respiratory depression"]
+    },
+    {
+        "id": 42,
+        "name": "Ticagrelor",
+        "category": "Antiplatelet",
+        "usage": "Used to reduce the risk of heart attack and stroke.",
+        "dosage": "90mg twice daily.",
+        "sideEffects": ["Bleeding", "Brusing", "Shortness of breath"],
+        "precautions": ["Monitor for bleeding", "Not for use in active bleeding disorders"]
+    },
+    {
+        "id": 43,
+        "name": "Atenolol",
+        "category": "Beta-blocker",
+        "usage": "Used to treat high blood pressure and chest pain.",
+        "dosage": "25-100mg once daily.",
+        "sideEffects": ["Fatigue", "Dizziness", "Cold hands and feet"],
+        "precautions": ["Monitor blood pressure", "Avoid sudden discontinuation"]
+    },
+    {
+        "id": 44,
+        "name": "Dexamethasone",
+        "category": "Corticosteroid",
+        "usage": "Used to treat inflammation, allergies, and autoimmune conditions.",
+        "dosage": "0.75-9mg daily, depending on condition.",
+        "sideEffects": ["Increased blood sugar", "Mood changes", "Weight gain"],
+        "precautions": ["Monitor blood sugar", "Avoid abrupt discontinuation"]
+    },
+    {
+        "id": 45,
+        "name": "Bupropion",
+        "category": "Antidepressant",
+        "usage": "Used to treat depression, smoking cessation, and ADHD.",
+        "dosage": "150-400mg daily.",
+        "sideEffects": ["Dry mouth", "Insomnia", "Weight loss"],
+        "precautions": ["Monitor for seizures", "Avoid alcohol", "Not for people with eating disorders"]
+    },
+    {
+        "id": 46,
+        "name": "Risperidone",
+        "category": "Antipsychotic",
+        "usage": "Used to treat schizophrenia and bipolar disorder.",
+        "dosage": "1-6mg daily.",
+        "sideEffects": ["Drowsiness", "Weight gain", "Dizziness"],
+        "precautions": ["Monitor for metabolic changes", "Not for elderly patients with dementia-related psychosis"]
+    },
+    {
+        "id": 47,
+        "name": "Diltiazem",
+        "category": "Calcium Channel Blocker",
+        "usage": "Used to treat high blood pressure, chest pain, and irregular heart rhythms.",
+        "dosage": "120-360mg once daily.",
+        "sideEffects": ["Dizziness", "Headache", "Edema"],
+        "precautions": ["Monitor heart rate", "Avoid sudden discontinuation"]
+    },
+    {
+        "id": 48,
+        "name": "Amiodarone",
+        "category": "Antiarrhythmic",
+        "usage": "Used to treat irregular heart rhythms.",
+        "dosage": "200-400mg daily.",
+        "sideEffects": ["Dizziness", "Fatigue", "Thyroid problems"],
+        "precautions": ["Monitor heart rate", "Liver and thyroid function"]
+    },
+    {
+        "id": 49,
+        "name": "Pregabalin",
+        "category": "Anticonvulsant",
+        "usage": "Used to treat nerve pain, fibromyalgia, and seizures.",
+        "dosage": "75-150mg twice daily.",
+        "sideEffects": ["Drowsiness", "Dizziness", "Weight gain"],
+        "precautions": ["Monitor for depression", "Avoid alcohol"]
+    },
+    {
+        "id": 50,
+        "name": "Loratadine",
+        "category": "Antihistamine",
+        "usage": "Used to treat allergy symptoms, including hay fever and hives.",
+        "dosage": "10mg once daily.",
+        "sideEffects": ["Drowsiness", "Dry mouth", "Headache"],
+        "precautions": ["Avoid alcohol", "Monitor for excessive drowsiness"]
+    }
+]
