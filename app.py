@@ -40,7 +40,7 @@ migrate = Migrate(app, db)
 jwt = JWTManager(app)
 CORS(
     app,
-    resources={r"/api/*": {"origins": "https://iridescent-lolly-506319.netlify.app"}},  # Allow React frontend
+    resources={r"/api/*": {"origins": "https://healthawarenessapp.netlify.app/"}},  # Allow React frontend
     supports_credentials=True,  # Allow cookies
 )
 
