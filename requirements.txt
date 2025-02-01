@@ -7,3 +7,5 @@ flask_cors
 flask_migrate
 bcrypt
 python-dotenv
+psycopg2
+
