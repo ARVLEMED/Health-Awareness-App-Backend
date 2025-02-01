@@ -1,27 +1,33 @@
 from flask import Flask, jsonify, request, make_response
 from flask_sqlalchemy import SQLAlchemy
-from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
+from flask_jwt_extended import create_access_token, jwt_required, JWTManager
 import bcrypt
 from flask_cors import CORS
 from flask_migrate import Migrate
-from models import db, User, Disease, Drug ,HealthTip,PreventiveMeasure# Import models from models.py
+from models import db, User, Disease, Drug, HealthTip, PreventiveMeasure  # Import models from models.py
 import json
 import random
 import traceback
 import logging
 import os
 from datetime import timedelta
-
 from dotenv import load_dotenv
 
-
+# Load environment variables
 load_dotenv()
-
 
 # Initialize Flask app
 app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Check for missing environment variables
+required_env_vars = ['DATABASE_URL', 'SECRET_KEY', 'JWT_SECRET_KEY']
+for var in required_env_vars:
+    if not os.getenv(var):
+        logger.error(f"Environment variable {var} is missing.")
+        exit(1)
+
 # App configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
@@ -43,18 +49,12 @@ CORS(
 def index():
     return make_response('<h1>Welcome to the Health Awareness App!</h1>', 200)
 
-
-@app.route('/api/signup', methods=['POST', 'OPTIONS'])
+# User Signup Route
+@app.route('/api/signup', methods=['POST'])
 def signup():
-    if request.method == 'OPTIONS':
-        return '', 204  # Handle preflight requests
-
     try:
-        # Get data from the request
         data = request.get_json()
-        logger.debug(f"Signup request received. Raw data: {data}")
-
-        if data is None:
+        if not data:
             return jsonify({"success": False, "message": "Invalid JSON or empty request"}), 400
 
         username = data.get('username')
@@ -62,17 +62,13 @@ def signup():
         password = data.get('password')
         confirmPassword = data.get('confirmPassword')
 
-        # Input validation
         if not all([username, email, password, confirmPassword]):
             return jsonify({"success": False, "message": "All fields are required"}), 400
-
         if password != confirmPassword:
             return jsonify({"success": False, "message": "Passwords do not match"}), 400
 
         # Check if user exists
-        existing_user = User.query.filter(
-            (User.username == username) | (User.email == email)
-        ).first()
+        existing_user = User.query.filter((User.username == username) | (User.email == email)).first()
         if existing_user:
             return jsonify({"success": False, "message": "Username or email already exists"}), 409
 
@@ -90,62 +86,39 @@ def signup():
         logger.error(f"Error during signup: {str(e)}\n{traceback.format_exc()}")
         return jsonify({"success": False, "message": "An error occurred during signup"}), 500
 
-
-@app.route('/api/login', methods=['POST', 'OPTIONS'])
+# User Login Route
+@app.route('/api/login', methods=['POST'])
 def login():
-    if request.method == 'OPTIONS':
-        return '', 204  # Respond to preflight request
-
     try:
-        # Get JSON data from request
         data = request.get_json()
-
-        # Validate input
         if not data or 'email' not in data or 'password' not in data:
             return jsonify({"success": False, "message": "Email and password are required"}), 400
 
-        # Debug: Log input data
-        print(f"Login attempt with email: {data['email']}")
-
-        # Query user from the database by email
-        user = User.query.filter_by(email=data['email']).first()  # Use email here
-        
+        user = User.query.filter_by(email=data['email']).first()
         if not user:
-            # Debug: User not found
-            print("User not found.")
             return jsonify({"success": False, "message": "Invalid credentials"}), 401
         
-        # Check if the password is correct
         if bcrypt.checkpw(data['password'].encode('utf-8'), user.password.encode('utf-8')):
-            # Debug: Password correct, generating token
-            print("Password correct, generating token.")
-
-            # Create a JWT token
-            access_token = create_access_token(identity={"email": user.email})  # Use email in the token payload
+            access_token = create_access_token(identity=str(user.email))  # Make sure identity is a string
             return jsonify({"success": True, "token": access_token}), 200
         else:
-            # Debug: Password incorrect
-            print("Incorrect password.")
             return jsonify({"success": False, "message": "Invalid credentials"}), 401
 
     except Exception as e:
-        # Catch any errors
+        logger.error(f"Error during login: {str(e)}\n{traceback.format_exc()}")
         return jsonify({"success": False, "message": str(e)}), 500
 
+
+
+# Protected API Routes
 @app.route('/api/diseases', methods=['GET'])
+@jwt_required()
 def get_diseases():
     try:
-        # Query all diseases from the database
         diseases = Disease.query.all()
-        
-        # Debug: Log diseases count
-        print(f"Diseases found: {len(diseases)}")
-
-        # Check if any diseases were found
         if not diseases:
             return jsonify({'success': False, 'message': 'No diseases found.'}), 404
 
-        # Format the response
         disease_list = [{
             'id': disease.id,
             'name': disease.name,
@@ -158,16 +131,15 @@ def get_diseases():
             'mode_of_spread': disease.mode_of_spread,
             'incubation_period': disease.incubation_period
         } for disease in diseases]
-        
-        # Return the list as a JSON response
+
         return jsonify({'success': True, 'data': disease_list}), 200
 
     except Exception as e:
-        print(f"Error: {str(e)}")
+        logger.error(f"Error fetching diseases: {str(e)}\n{traceback.format_exc()}")
         return jsonify({'success': False, 'message': str(e)}), 500
-
-# API Route to Add a New Disease
+    
 @app.route('/api/diseases', methods=['POST'])
+@jwt_required()
 def add_disease():
     try:
         data = request.get_json()
@@ -187,10 +159,29 @@ def add_disease():
         return jsonify({"success": True, "message": "Disease added successfully!"}), 201
     except Exception as e:
         return jsonify({"success": False, "message": str(e)}), 500
+
+@app.route('/api/drugs', methods=['GET'])
+@jwt_required()
+def get_drugs():
+    try:
+        drugs = Drug.query.all()
+        drug_list = [{
+            'id': drug.id,
+            'name': drug.name,
+            'category': drug.category,
+            'usage': drug.usage,
+            'dosage': drug.dosage,
+            'side_effects': drug.side_effects,
+            'precautions': drug.precautions
+        } for drug in drugs]
+
+        return jsonify({'success': True, 'data': drug_list}), 200
+    except Exception as e:
+        logger.error(f"Error fetching drugs: {str(e)}\n{traceback.format_exc()}")
+        return jsonify({'success': False, 'message': str(e)}), 500
     
-
 @app.route('/api/drugs', methods=['POST'])
-
+@jwt_required()
 def add_drug():
     try:
         data = request.get_json()
@@ -217,48 +208,23 @@ def add_drug():
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)}), 500
     
-@app.route('/api/drugs', methods=['GET'])
-#@jwt_required()
-def get_drugs():
-    try:
-        # Fetch all drugs from the database
-        drugs = Drug.query.all()
-
-        # Format the response as a list of dictionaries
-        drug_list = [{
-            'id': drug.id,
-            'name': drug.name,
-            'category': drug.category,
-            'usage': drug.usage,
-            'dosage': drug.dosage,
-            'side_effects': drug.side_effects,
-            'precautions': drug.precautions
-        } for drug in drugs]
-
-        return jsonify({'success': True, 'data': drug_list}), 200
-    except Exception as e:
-        return jsonify({'success': False, 'message': str(e)}), 500
-    
-# API Route for Health Tips (GET and POST)
-import random
 
 @app.route('/api/health-tips/random', methods=['GET'])
 def get_random_health_tip():
     try:
         health_tips = HealthTip.query.all()
-
         if not health_tips:
             return jsonify({'success': False, 'message': 'No health tips available.'}), 404
 
-        random_tip = random.choice(health_tips)  # Select a random health tip
+        random_tip = random.choice(health_tips)
         return jsonify({'success': True, 'data': {'id': random_tip.id, 'tip': random_tip.tip}}), 200
-    
-    except Exception as e:
-        # Log the error
-        print(f"Error fetching random health tip: {str(e)}")
-        return jsonify({'success': False, 'message': 'An error occurred while fetching health tips.'}), 500
 
+    except Exception as e:
+        logger.error(f"Error fetching health tips: {str(e)}\n{traceback.format_exc()}")
+        return jsonify({'success': False, 'message': 'An error occurred while fetching health tips.'}), 500
+    
 @app.route('/api/health-tips', methods=['POST'])
+@jwt_required()
 def add_health_tip():
     try:
         data = request.get_json()
@@ -277,6 +243,7 @@ def add_health_tip():
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)}), 500
 
+
 @app.route('/api/preventive-measures', methods=['GET'])
 @jwt_required()
 def get_preventive_measures():
@@ -287,9 +254,11 @@ def get_preventive_measures():
             'data': [measure.to_dict() for measure in measures]
         }), 200
     except Exception as e:
-        print(f"Error fetching preventive measures: {str(e)}")
+        logger.error(f"Error fetching preventive measures: {str(e)}\n{traceback.format_exc()}")
         return jsonify({'success': False, 'message': 'An error occurred while fetching data.'}), 500
+    
 @app.route('/api/preventive-measures', methods=['POST'])
+@jwt_required()
 def add_preventive_measure():
     try:
         data = request.get_json()

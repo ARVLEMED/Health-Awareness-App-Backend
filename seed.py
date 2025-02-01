@@ -12,6 +12,8 @@ with open('data/drugs_data.json', 'r') as file:
 with open('data/health_tips_data.json', 'r') as file:
     health_tips = json.load(file)
 
+with open('data/preventive_measures_data.json', 'r') as file:
+    preventive_measures = json.load(file)  # Load preventive measures data
 
 # Use the application context to add data
 with app.app_context():
@@ -22,7 +24,7 @@ with app.app_context():
             category=disease.get('category', 'Unknown'),
             symptoms=", ".join(disease.get('symptoms', [])),
             causes=", ".join(disease.get('causes', [])),
-            prevention=", ".join(disease.get('prevention', [])),
+            prevention=", ".join(disease.get('prevention', [])),  # Prevention linked only to disease itself
             treatment=", ".join(disease.get('treatments', []))
         )
         db.session.add(new_disease)
@@ -58,3 +60,15 @@ with app.app_context():
 
 print("Health tips data successfully seeded!")
 
+with app.app_context():
+    # Seeding preventive measures
+    for preventive_measure in preventive_measures:
+        new_preventive_measure = PreventiveMeasure(
+            title=preventive_measure['title'],  # Use 'title' instead of 'measure'
+            description=preventive_measure.get('description', 'No description available')  # Optional description
+        )
+        db.session.add(new_preventive_measure)
+
+    db.session.commit()
+
+print("Preventive measures data successfully seeded!")

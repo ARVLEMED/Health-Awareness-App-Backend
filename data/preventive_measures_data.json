@@ -1,42 +1,42 @@
 [
     {
-        "measure": "Wash hands regularly",
+        "title": "Wash hands regularly",
         "description": "Washing hands with soap and water helps to reduce the spread of germs and infections."
     },
     {
-        "measure": "Get vaccinated",
+        "title": "Get vaccinated",
         "description": "Vaccination can help prevent the spread of contagious diseases, protecting both individuals and the community."
     },
     {
-        "measure": "Eat a balanced diet",
+        "title": "Eat a balanced diet",
         "description": "A diet rich in fruits, vegetables, and whole grains helps strengthen the immune system and prevents various health issues."
     },
     {
-        "measure": "Exercise regularly",
+        "title": "Exercise regularly",
         "description": "Engaging in physical activity improves overall health, boosts the immune system, and reduces the risk of chronic diseases."
     },
     {
-        "measure": "Avoid smoking",
+        "title": "Avoid smoking",
         "description": "Smoking increases the risk of lung disease, heart disease, and various cancers. Quitting can significantly improve your health."
     },
     {
-        "measure": "Maintain good hygiene",
+        "title": "Maintain good hygiene",
         "description": "Practicing good hygiene, such as brushing teeth and cleaning wounds, helps prevent infections and promotes health."
     },
     {
-        "measure": "Practice safe sex",
+        "title": "Practice safe sex",
         "description": "Using protection during sexual activity can reduce the risk of sexually transmitted infections (STIs) and unwanted pregnancies."
     },
     {
-        "measure": "Stay hydrated",
+        "title": "Stay hydrated",
         "description": "Drinking sufficient water every day is essential for maintaining proper body function and preventing dehydration."
     },
     {
-        "measure": "Get enough sleep",
+        "title": "Get enough sleep",
         "description": "Adequate sleep is essential for mental and physical health, helping the body repair and recharge."
     },
     {
-        "measure": "Limit alcohol consumption",
+        "title": "Limit alcohol consumption",
         "description": "Excessive alcohol intake can lead to liver disease, high blood pressure, and other health problems. Moderation is key."
     }
 ]
